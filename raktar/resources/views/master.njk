@@ -5,31 +5,86 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>AdonisJs - Node.Js MVC Framework</title>
+  <title>CsoTy - Raktar madness</title>
 
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700,900' rel='stylesheet' type='text/css'>
   <link rel="icon" href="/assets/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/sandstone/bootstrap.min.css" crossorigin="anonymous">
 </head>
 <body>
 
   <section>
     <div class="__wrapper">
-      {% block content %}{% endblock %}
+      {% block content %}
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="index.html">Heritage VPS</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="Substuff/">Substuff</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Games <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="Battlefield/">Battlefield</a></li>
+                            <li class="divider"></li>
+                            <li><a href="Twitch/">Twitch</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="Bekalolz/">Bekalolz</a></li>                 
+                    <li><a href="Soundcloud/">Soundcloud stuff</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">:v</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>STUFF</h1>
+        <div class="row">
+            <div class="col-sm-3" align="center">
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/44/00/4d/44004dc5b9814979882b8a720a9a08b0.jpg" alt="" class="img-thumbnail">
+            </div>
+            <div class="col-sm-5" align="center">
+                <h2>Emphasis classes</h2>
+                <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+                <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+                <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+                <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            </div>
+            <div class="col-sm-3" align="center">
+                <img src="http://www.nismo.co.jp/products/RB26DETT/img/img_01.jpg" alt="" class="img-circle">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+      
+
+      {% endblock %}
 
       {% block footer %}
-        <div class="__footer">
-          <ul>
-            <li>
-              <a href="https://twitter.com/intent/tweet?url=http://adonisjs.com&text=I am using AdonisJs, a practical MVC framework for nodejs&hashtags=nodejs,adonisframework" target="_blank">
-                <img src="/assets/twitter.svg">
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/adonisjs/adonis-framework" target="_blank"><img src="/assets/github.svg"></a>
-            </li>
-          </ul>
-        </div>
+      
       {% endblock %}
     </div>
   </section>
