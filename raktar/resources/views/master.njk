@@ -34,8 +34,9 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Login <span class="sr-only">(current)</span></a></li>
-                    <li class="dropdown">
+                    <li class="{% block homeActive %}{% endblock %}"><a href="/">Home <span class="sr-only"></span></a></li>
+                    <li class="{% block loginActive %}{% endblock %}"><a href="/login">Login</a></li>
+                    <li class="dropdown class="{% block dropdownActive %}{% endblock %}"">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Raktárműveletek <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/bevetelez">Bevételezés</a></li>
@@ -46,7 +47,7 @@
                         </ul>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="/listKeszlet">Teljes készlet megtekintése</a></li>
+                    <li class="{% block listActive %}{% endblock %}"><a href="/listKeszlet">Teljes készlet megtekintése</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">:v</a></li>
