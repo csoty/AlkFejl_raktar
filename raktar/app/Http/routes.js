@@ -17,4 +17,4 @@
 
 const Route = use('Route')
 
-Route.get('/',RaktarController.index);
+Route.get('/', 'RaktarController.index');
