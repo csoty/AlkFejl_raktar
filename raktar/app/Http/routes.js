@@ -17,4 +17,4 @@
 
 const Route = use('Route')
 
-Route.on('/').render('master')
+Route.get('/',RaktarController.index);
