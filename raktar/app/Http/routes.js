@@ -18,3 +18,8 @@
 const Route = use('Route')
 
 Route.get('/', 'RaktarController.index');
+
+Route.get('/register','UserController.showReg');
+Route.post('/register','UserController.reg');
+Route.get('/login', 'UserController.showLogin');
+Route.post('/login', 'UserController.login');
