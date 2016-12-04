@@ -19,6 +19,8 @@ const Route = use('Route')
 
 Route.get('/', 'RaktarController.index');
 
+Route.get('/letrehozas', 'RaktarController.newItem');
+
 Route.get('/register','UserController.showReg');
 Route.post('/register','UserController.reg');
 Route.get('/login', 'UserController.showLogin');
