@@ -1,11 +1,16 @@
 {% extends 'master' %}
+{% block homeActive %}
+active
+{% endblock %}
 
 {% block content %}
-  <div class="__banner">
-    <div class="banner__inner">
-      <img src="/assets/logo.svg">
-      <h2>Az oldal lényege:</h2>
-      <p>A program célja, hogy egy alapvető raktár kezelését lehessen könnyen végrehajtani. Ehhez szükséges bejelentkezési felülettel, illetve bejeletkezés utáni kezelőfelülettel, hogy lehessen cikkeket bevételezni a megfelelő tulajdonságokkal (cikkszám, megnevezés, forrás, ár, rendelkezésre álló mennyiség, esetlegesen már megrendelt érkezésben lévő mennyiség), kiadni lehessen a készleten lévőket (esetleg feljegyezni az igényelt kiadás mennyiségét, amennyiben nincs elegendő készleten), cikkszámot lehessen létrehozni mennyiségtől függetlenül, már kifutott cikkszámot lehessen törölni.</p>
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h2 class="panel-title">Az oldal lényege:</h2>
+    </div>
+    <div class="panel-body">
+      <p>A program célja, hogy egy alapvető raktár kezelését lehessen könnyen végrehajtani.</p>
+      <p>Ehhez szükséges bejelentkezési felülettel, illetve bejeletkezés utáni kezelőfelülettel, hogy lehessen cikkeket bevételezni a megfelelő tulajdonságokkal (cikkszám, megnevezés, forrás, ár, rendelkezésre álló mennyiség, esetlegesen már megrendelt érkezésben lévő mennyiség), kiadni lehessen a készleten lévőket (esetleg feljegyezni az igényelt kiadás mennyiségét, amennyiben nincs elegendő készleten), cikkszámot lehessen létrehozni mennyiségtől függetlenül, már kifutott cikkszámot lehessen törölni.</p>
     </div>
   </div>
 {% endblock %}

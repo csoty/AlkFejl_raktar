@@ -1,0 +1,41 @@
+{% extends 'master' %}
+{% block dropdownActive %}
+active
+{% endblock %}
+{% block content %}
+    <h2> Meglévő cikk törlése </h2>
+
+    {% if currentUser %}
+    <form class="form-horizontal" method="post">
+        {{ csrfField }}
+        <fieldset>
+            <legend>Törlésre jelölt cikk:</legend>
+            <div class="form-group">
+                <label for="cikkselector" class="col-lg-2 control-label">Cikk kiválasztása</label>
+                <div class="col-lg-10">
+                    <select class="form-control" id="cikkselector" name="id">
+                        {% for item in items %}
+                            <option value="{{ item.id }}"> {{ item.id }}: {{ item.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary">Törlés</button>
+                    <button type="button" onclick="history.go(-1);" class="btn btn-default">Vissza</button>
+                </div>
+            <div>
+        </fieldset>
+    </form>
+    {% else %}
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title"> Jogosultság szükséges</h3>
+        </div>
+        <div class="panel-body">
+            <p><a href="/login" class="btn btn-primary">Bejelentkezés</a> VAGY <a  href="/register" class="btn btn-success">Regisztráció</a></p>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

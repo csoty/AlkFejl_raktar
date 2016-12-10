@@ -1,0 +1,49 @@
+{% extends 'master' %}
+{% block dropdownActive %}
+active
+{% endblock %}
+{% block content %}
+    <h2> Új cikk felvétele </h2>
+
+    {% if currentUser %}
+    <form class="form-horizontal" method="post">
+        {{ csrfField }}
+        <fieldset>
+            <legend>Cikk:</legend>
+            <div class="form-group">
+                <label for="name" class="col-lg-2 control-label">Megnevezés:</label>
+                <div class="col-lg-10">
+                    <input tpye="text" class="form-control" id="name" name="name" placeholder="<megnevezés>">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="desc" class="col-lg-2 control-label">Leírás:</label>
+                <div class="col-lg-10">
+                    <textarea class="form-control" rows="4" name="desc" id="desc"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="qty" class="col-lg-2 control-label">Darabszám:</label>
+                <div class="col-lg-2">
+                    <input tpye="number" class="form-control" name="qty" id="qty" placeholder="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" class="btn btn-primary">Létrehozás</button>
+                    <button type="reset" class="btn btn-default">Visszaállítás</button>
+                </div>
+            <div>
+        </fieldset>
+    </form>
+    {% else %}
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title"> Jogosultság szükséges</h3>
+        </div>
+        <div class="panel-body">
+            <p><a href="/login" class="btn btn-primary">Bejelentkezés</a> VAGY <a  href="/register" class="btn btn-success">Regisztráció</a></p>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}

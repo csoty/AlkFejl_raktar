@@ -40,7 +40,7 @@ class UserController {
         }
     }
 
-    * logout(request, response) {
+    * logout (request, response) {
         yield request.auth.logout();
         response.redirect('/');
     }
